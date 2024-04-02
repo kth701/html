@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미디어 쿼리 - 배경이미지 변경하기</title>
+  <style>
+    /* 기본 배경이미지 */
+    .box {
+      width: 300px; height: 500px;
+      border: 1px solid red;
+
+      background: url(img/photo.jpg) no-repeat fixed;
+      background-size: cover;/* 가로 100% */
+      background-size: contain;/* 세로 100% */
+    }
+    @media screen and (max-width: 1024px) {/* 1024이하 */
+      .box {
+        background: url(img/1.jpg) no-repeat fixed;
+        background-size: cover;/* 가로 100% */
+        background-size: contain;/* 세로 100% */
+      }
+    }
+    @media screen and (max-width: 768px) {/* 768이하 */
+      .box {
+        background: url(img/2.jpg) no-repeat fixed;
+        background-size: cover;/* 가로 100% */
+        background-size: contain;/* 세로 100% */
+      }
+    }
+    @media screen and (max-width: 320px) {/* 320이하 */
+      .box {
+        background: url(img/3.jpg) no-repeat fixed;
+        background-size: cover;/* 가로 100% */
+        background-size: contain;/* 세로 100% */
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

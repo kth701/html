@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스타일 02</title>
+  <style>
+    /* 아이디 선택자 */
+    #rint { color: red;}
+    /* 클래스 선택자 */
+    .sel { color: green;}
+    .sel2 { background-color: rgb(171, 227, 208);}
+    .sel3 { font-size: 24px;}
+
+    /* 속성 선택자 */
+    input[type="text"] { background-color: aqua;}
+    input[type="password"] { background-color: rgb(154, 248, 60);}
+
+    /* 후손 선택자: 선택자A  선택자B */
+    #header  h1 { color : red;}
+    #section  h1 { color: orange;}
+
+    /* 자손 선택자: 선택자A > 선택자B */
+    /* #header > h1 { color : red;}
+    #section > h1 { color: orange;} */
+
+    /* table > tbody > tr > th { color : blueviolet;} */
+    table  th { color : blueviolet;}
+
+    /* 반응 선택자 */
+    table th:hover { color: gray;}<!-- 마우스가 올라왔을 때-->
+    table th:active { color: rgb(228, 83, 182);}<!-- 누르고 있을 때-->
+  </style>
+</head>
+<body>
+  <table border="1" width="100">
+    <tr>
+      <th>1</th>
+      <th>2</th>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+  </table>
+  <hr>
+  <div id="header">
+    <h1 class="title">Lorem ipsum</h1>
+    <div class="nav">
+      <h1>Navigation</h1>
+    </div>
+  </div>
+  <div id="section">
+    <h1 class="title">Lorem ipsum</h1>
+    <p>Dolor esse do aliquip quis sit dolore pariatur reprehenderit magna commodo pariatur est et.</p>
+  </div>
+  
+  <hr>
+  <input type="text"/>
+  <input type="password" />
+  <input type="text"/>
+
+  <hr>
+  <h1 id="rint ">css3 선택자</h1>
+  <h2>css3 선택자</h2>
+  <h3 id="rint">css3 선택자</h3>
+  <hr>
+  <ul>
+    <li class="sel sel3 sel2">list-1</li>
+    <li>list-2</li>
+    <li class="sel sel1">list-3</li>
+    <li>list-4</li>
+    <li>list-5</li>
+  </ul>
+</body>
+</html>

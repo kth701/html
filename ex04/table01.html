@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블 학습하기</title>
+  <style>
+    table, tr, th, td {
+      border: 1px solid rgb(94, 85, 85);
+      border-collapse: collapse;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h3>테이블01</h3>
+  <hr>
+  <table  width="300"><!-- tr*5>td*5{$} -->
+    <tr>
+      <td colspan="2">1</td>
+      <td colspan="3">2</td>   
+    </tr>
+    <tr>
+      <td>1</td>
+      <td colspan="3">2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td rowspan="2">1</td>
+      <td>2</td>
+      <td rowspan="3">3</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      
+    </tr>
+  </table>
+  <hr>
+  <h3>일기 예보</h3>
+  <table>
+    <tr>
+      <th rowspan="2">지역</th>
+      <th colspan="2">20일(수)</th>
+      <th colspan="2">21일(목)</th>
+      <th colspan="2">22일(금)</th>
+    </tr>
+    <tr>
+      <td>오전</td>
+      <td>오후</td>
+      <td>오전</td>
+      <td>오후</td>
+      <td>오전</td>
+      <td>오후</td>
+    </tr>
+    <tr>
+      <td>서울<br>경기도</td>
+      <td><img src="img/shine.png" ></td>
+      <td><img src="img/rain.png" alt=""></td>
+      <td><img src="img/rain.png" alt=""></td>
+      <td><img src="img/rain.png" alt=""></td>
+      <td><img src="img/shine.png" ></td>
+      <td><img src="img/shine.png" ></td>
+    </tr>
+    <tr>
+      <td>부산</td>
+      <td><img src="img/shine.png" ></td>
+      <td><img src="img/rain.png" alt=""></td>
+      <td><img src="img/shine.png" ></td>
+      <td><img src="img/rain.png" alt=""></td>
+      <td><img src="img/shine.png" ></td>
+      <td><img src="img/rain.png" alt=""></td>
+    </tr>
+  </table>
+</body>
+</html>

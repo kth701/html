@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid02</title>
+  <style>
+    #wrapper1 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      /* 컬럼 사이 간격 */
+      grid-column-gap: 20px;
+      /* 줄 사이 간격 */
+      grid-row-gap: 10px;
+
+      margin-bottom: 20px;
+    }
+    #wrapper2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+     
+      grid-gap: 10px 20px;
+      margin-bottom: 20px;
+    }
+
+    h1 { font-size: 24px;}
+    .items {
+      padding: 15px;background-color: #eee;
+    }
+    .items:nth-child(odd) { background-color: #bbb;}
+
+  </style>
+</head>
+<body>
+  <h1>auto-fit</h1>
+  <div id="wrapper1">
+    <div class="items">Eiusmod quis magna esse mollit anim aute voluptat </div>
+    <div class="items">Enim tempor ullamco excepteur ullamco tempor consequat occaecat labore occaecat mollit consectetur in in in.</div>
+    <div class="items">Excepteur eu ea ad reprehenderit ex.</div>
+    <div class="items">Id tempor nostrud laborum esse .</div>
+    <div class="items">Qui consectetur aute dolor ut ea ex dolore.</div>
+    <div class="items">Qui consectetur aute dolor ut ea ex dolore.</div>
+  </div>
+
+  <h1>auto-fill</h1>
+  <div id="wrapper2">
+    <div class="items">Eiusmod quis magna esse mollit anim aute voluptat </div>
+    <div class="items">Enim tempor ullamco excepteur ullamco tempor consequat occaecat labore occaecat mollit consectetur in in in.</div>
+    <div class="items">Excepteur eu ea ad reprehenderit ex.</div>
+    <div class="items">Id tempor nostrud laborum esse .</div>
+    <div class="items">Qui consectetur aute dolor ut ea ex dolore.</div>
+    <div class="items">Qui consectetur aute dolor ut ea ex dolore.</div>
+  </div>
+</body>
+</html>

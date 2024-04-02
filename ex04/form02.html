@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼태그02</title>
+</head>
+<body>
+  <!-- 날짜 필드 -->
+  <h3>날짜 지정하기</h3>
+  <input type="date">
+  <input type="month">
+  <input type="week"><br>
+  <!-- 시간 필드 -->
+  <input type="time">
+  <input type="datetime">
+  <input type="datetime-local">
+
+
+  <hr>
+  <!-- 숫자 필드-->
+  <ul>
+    <li>
+      <label><input type="checkbox"  value="s_3"> 선물용 3kg</label>
+      <input type="number" min="1" max="10" step="1" value="1">개 (최대 5개)
+    </li>
+    <li>
+      <label><input type="checkbox"  value="s_5"> 선물용 5kg</label>
+      <input type="range" min="1" max="10" >개 (최대 5개)
+    </li>
+  </ul>
+
+  <hr>
+  <form autocomplete="on"><!-- 자동 완성 기능 -->
+
+    <fieldset>
+      <legend>주문하기</legend>
+
+      <!-- disable :비활성화, readonly:읽기전용-->
+      <label >이름:</label>
+      <input type="text" 
+              value="홍길동" 
+              name="name" 
+              placeholder="이름을 입력하세요"/><br>
+      
+      <label >배송 주소</label>
+      <input type="text" name="addr"><br>
+      
+      <label >연락처</label><!--required: 반드시 입력해야하는 텍스트필드-->
+      <input type="text" name="tel" autofocus required/><br>
+      검색<input type="search">
+      이메일<input type="email">
+
+ 
+      <input type="submit" value="전송하기">
+      <input type="button" value="일반버튼"><!-- submit기능이 없음-->
+      <button>버튼태그</button><!-- submit기능이 있음-->
+      <input type="reset"  value="초기화">
+    </fieldset>
+  </form>
+
+</body>
+</html>

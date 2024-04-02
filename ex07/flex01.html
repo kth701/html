@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플렉스 박스 레이아웃</title>
+  <style>
+    .container {
+      width: 700px;
+      /* 플렉스 컨네이너 설정 */
+      display:flex;
+      /*기본 설정 값 *//* 좌 -> 우 */
+      /* flex-direction: row; */
+
+      background-color: #eee;
+      border: 1px solid #222;
+      margin-bottom: 30px;
+    }
+    .box {
+      width: 80px;
+      background: #222;
+
+      margin: 5px;padding: 5px 45px;
+    }
+    p{
+      color: #fff;
+      text-align: center;
+    }
+
+    #opt1 {
+      /* flex-direction: row; */
+      /*한줄 표시, 기본값 */
+      flex-wrap: nowrap;
+      /*여러줄 표시 */
+      flex-wrap: wrap;  
+      /* flex-wrap: wrap-reverse; */
+    }
+    #opt2 {
+      /* 우->좌 */
+      flex-direction: row-reverse;
+    }
+    #opt3 {
+      /* 위 -> 아래 */
+      flex-direction: column;
+    }
+    #opt4 {
+      /* 아래 -> 위 */
+      flex-direction: column-reverse;
+    }
+    #opt5 {
+     /* flex의 기본 속성은 row, nowrap 설정 */
+     flex-flow: row wrap;
+     /* 
+     flex-flow: row-reverse wrap;
+     flex-flow: column wrap;
+     flex-flow: column-reverse wrap; 
+     */
+    }
+
+    #opt6 {
+      /* 기본값 */
+      justify-content: flext-start;
+      justify-content: flex-end;
+      justify-content: center;
+      justify-content: space-between;
+      justify-content: space-around;
+    }
+
+    #opt7 {
+      width: 1000px;height: 250px;
+
+      /* 교차축 정렬*/
+      /* align-items: flex-start; */
+      align-items: center;
+      /* align-items: flex-end; */
+      /* 문자 기준선 */
+      /* align-items: baseline; */
+      /* 항목을 늘려 교차축에 가득 차게 배치*/
+      /* align-items: stretch; */
+
+    }
+    .box1 { align-self: flex-start;}
+    .box2 { align-self: flex-end;}
+
+    /* 여러줄 교차축 정렬 */
+    #opt8 {
+      width: 500px;height: 500px;
+      flex-flow: row wrap;/* 여러줄 표시 */
+
+      align-content: flex-start;
+      align-content: center;
+      align-content: flex-end;
+      align-content: space-between;
+      align-content: space-around;
+      align-content: stretch;
+  
+    }
+    /* #opt8 .box { height: 50px;} */
+
+    .box_center {
+      margin-left: auto;
+      margin-right: auto;
+
+      width: 1000px;height: 150px;
+      border: 1px dotted red;
+
+      display: flex;
+      /* flex-flow: row nowrap; */
+      /* 주축 정렬: row기준 */
+      justify-content: center;
+      /* 교차축 정렬 */
+      align-items: center ;
+    }
+    .box_center h1 {
+      width: 500px;
+      padding: 10px;
+      border:1px solid #aeacac;
+      box-shadow: 3px 3px 3px gray;
+
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="opt1">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+    <div class="box"><p>5</p></div>
+    <div class="box"><p>6</p></div>
+    <div class="box"><p>7</p></div>
+    <div class="box"><p>8</p></div>
+  </div>
+  <div class="container" id="opt2">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+  </div>
+  <div class="container" id="opt3">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+  </div>
+  <div class="container" id="opt4">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+  </div>
+  <div class="container" id="opt5">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+    <div class="box"><p>5</p></div>
+    <div class="box"><p>6</p></div>
+    <div class="box"><p>7</p></div>
+    <div class="box"><p>8</p></div>
+  </div>
+  <h1>주축 정렬: justify-content</h1>
+  <div class="container" id="opt6">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+  </div>
+
+  <h1>교차축 정렬: align-item</h1>
+  <div class="container" id="opt7">
+    <div class="box"><p>1</p></div>
+    <div class="box box1" style="font-size: 14px;"><p>2</p></div>
+    <div class="box box2" style="font-size: 25px;"><p>3</p></div>
+    <div class="box" style="font-size: 10px;"><p>4</p></div>
+  </div>
+  <h1>여러줄일때 교차축 정렬: align-content</h1>
+  <div class="container" id="opt8">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+  </div>
+
+  <div class="box_center">
+    <h1>중앙에 배치하기</h1>
+  </div>
+
+
+</body>
+</html>

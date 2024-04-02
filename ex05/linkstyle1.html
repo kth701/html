@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+    :link, :visited, :hover, :active
+    */
+
+    .navi ul li {
+      list-style: none;
+      float: left; /* 수직 -> 수평 */
+      width: 150px;
+      padding: 10px;
+
+      border: 0px solid gray;
+    }
+
+    .navi a:link,
+    .navi a:visited {
+      display: block;
+      font-size: 14px;
+      color: #000;
+
+      padding: 10px;
+      text-decoration: none;
+      text-align: center;
+    }
+    .navi a:hover,
+    .navi a:focus
+    {
+      background-color: #222;
+      color: #fff;
+    }
+    /* .navi a:focus {
+      color: green;
+    } */
+    .navi a:active {
+      background-color: #f00;
+    }
+    section { clear: both;}/* float 해제 */
+
+    .contents {
+      width: 400px;
+      margin: 30px auto;
+
+      padding: 20px;
+      border: 1px solid #222;
+      border-radius: 5px;
+    }
+
+    /* :target가상클래스 -> 앵커의 목적지가되는 부분의 스타일적용 */
+    #intro:target {
+      background-color: #0069e0;
+      color: #fff;
+    }
+    #room:target {
+      background: #ff9844;
+    }
+    #reservation {
+      background: #fff8dc;
+    }
+
+    /* 선택 상태에 따른 스타일 적용 */
+    input:checked + label {
+      color: red;
+      font-weight: bold;
+    }
+    
+    /* radio요소가 아니면 요소에 마우스가 호버이면 스타일 적용 */
+    #check input:not([type=radio]) {
+      border-color: blueviolet;
+    }
+    /* 가상요소: 문서안에 특정 부분에 스타일 지정하기 위해 가상요소를 추가 
+      => "::"(콜론) 2개를 붙여서 표시
+    */
+    #first { 
+      border: 1px dotted black;
+      /* 가로폭 범위 */
+      min-width: 300px;
+      max-width: 600px; 
+
+    }
+    #first p::first-line {
+      color: blue;
+    }
+    #first p::first-letter{
+      color: red;
+    }
+    #after li.new::after {
+      content:"NEW!!";
+
+      font-size: x-small;
+      color: #fff;
+      background:#f00;
+
+      padding: 2px 4px;
+      margin: 0 10px;
+    }
+    
+
+
+
+
+  </style>
+</head>
+<body>
+ 
+  <div class="container">
+
+    <div id="after">
+        <h3>제품 목록</h3>
+        <hr>
+        <ul>
+          <li class="new">제품A</li>
+          <li>제품B</li>
+          <li>제품C</li>
+          <li class="new">제품D</li>
+        </ul>
+    </div>
+
+    <br><br><br>
+    <div id="first">
+      <p>Pariatur labore aliquip id pariatur pariatur ut exercitation culpa amet deserunt. Duis consequat et Lorem cillum voluptate ad incididunt amet tempor aliqua. In esse dolore dolor esse ex enim nisi ut officia consectetur tempor aliquip. Dolore esse proident amet duis officia ut duis fugiat.</p>
+    </div>
+
+    <br><br><br>
+    <div id="check">
+      <fieldset>
+        <legend>객실 형태</legend>
+        <ul>
+          <li>
+            <input type="radio" name="room" id="basic">
+            <label for="basic">기본형 최대2인)</label></li>
+          <li>
+            <input type="radio" name="room" id="family">
+            <label for="family">가족형(최대8인)</label></li>
+          <li>
+            <input type="text"></li>
+        </ul>
+      </fieldset>
+    </div>
+    
+
+    <br><br><br>
+    <nav class="navi">
+      <ul>
+        <li><a href="#intro">이용 안내</a></li>
+        <li><a href="#room">객실 소개</a></li>
+        <li><a href="#reservation">예약 방법 및 요금</a></li>
+        <li><a href="formstyle1.html">예약하기</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <div id="intro" class="contents">
+        <h2>이용안내</h2>
+        <p>Mollit ex magna non velit sit ut et eu officia commodo proident ea eu laborum. Reprehenderit amet qui do magna nostrud amet anim magna ipsum magna dolore cupidatat. Consequat nisi reprehenderit incididunt ea laboris Lorem cillum sit tempor irure officia reprehenderit ipsum.</p>
+      </div>
+      <div id="room" class="contents">
+        <h2>객실 소개</h2>
+        <p>Ea ullamco laboris pariatur fugiat sint fugiat ullamco pariatur cillum ipsum. Esse dolor aliquip duis magna deserunt ullamco ut enim adipisicing irure esse amet magna. Officia commodo eiusmod Lorem esse voluptate in sint.</p>
+      </div>
+      <div id="reservation" class="contents">
+        <h2>예약 방법 및 요금</h2>
+        <p>Voluptate enim dolor ullamco cillum laborum cupidatat nostrud est est elit quis. In eiusmod incididunt incididunt non mollit velit et tempor id qui dolore occaecat amet laborum. Lorem officia cillum cupidatat ullamco irure aliquip exercitation culpa labore. Et ea anim velit officia incididunt sunt ex irure laborum. Culpa pariatur ea amet excepteur nostrud deserunt ullamco minim enim ut eiusmod ut. Lorem dolore ut enim occaecat laborum ad consequat magna cupidatat amet in non sit.</p>
+      </div>
+    </section>
+    
+
+  </div>
+</body>
+</html>

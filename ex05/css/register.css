@@ -1,0 +1,84 @@
+* {
+  margin: 0; padding:0;
+}
+body { background: #ccc; padding: 20px;}
+#signup {
+  background: #ffff;
+  border: 1px solid #222;
+  border-radius: 5px;
+
+  padding: 20px;
+  width: 400px;
+  margin: 30px auto;/* 수평 정렬 */
+}
+
+#signup fieldset { 
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+#signup legend{
+  font-size: 16px;
+  font-weight: bold;
+
+  padding-left: 5px;
+  padding-bottom: 10px;
+}
+#signup ul li {
+  list-style: none;
+  line-height: 30px;
+  padding: 5px 10px;
+  margin-bottom: 2px;
+}
+#signup button {
+  border: 1px solid #222;
+  border-radius: 20px;
+
+  display: block;
+  font-size: 16px;
+  padding: 7px 25px;
+  margin: auto;
+  letter-spacing: 0.3em;
+}
+#signup label {
+  float: left;
+  font-size:13px;
+  width: 110px;
+}
+
+/* input요소 속성별 스타일 */
+#signup input[type=text],
+#signup input[type=password],
+#signup input[type=tel],
+#signup input[type=email]
+ {
+  border: 1px solid #ccc;
+
+  /* 
+  border:none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0px; 
+  */
+
+  border-radius: 3px;
+  font-size: 13px;
+
+  width: 200px;
+  padding: 5px;
+
+  /* 포커스 이동시 스타일 해제 */
+  outline: none;
+}
+#signup input[required]{
+  /* border: 1px red solid; */
+}
+#signup input[readonly]{
+  border: none;
+}
+#signup fieldset:last-of-type{
+  border: none;
+  margin-bttom: 0;
+}
+#signup button:hover {
+  background-color: #222;
+  color: #fff;
+}

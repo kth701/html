@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹요소 배치</title>
+
+  <style>
+    .box {
+      width: 100px;height: 100px;
+      background: #b8b4b4;color:white;
+      margin-bottom: 5px;
+    }
+    .box1 {
+      background: red;
+    }
+    .box2 {
+      position: relative;/*현재요소가 좌표의 원점 */
+      top: 10px;left: 10px;
+      background:  green;
+
+      overflow: hidden;/* 현재요소의 가로폭,세로폭을 벗나면 숨기기 */
+      
+    }
+    .box2 .box2-1 {
+      /* 상위요소가 relative/fixed/absolute로 설정했을 경우 좌표원점 */
+      /* position: absolute; */
+      bottom: 0px; right: 0px;
+    }
+
+    .box3 {
+      position: fixed;
+      bottom: 0;right: 0px;
+      background: blue;
+    }
+    .box4 {
+      background: blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <div class="box box1">
+    box-1
+  </div>
+  <div class="box box2">
+    box-2
+    <div class="box2-1" style="border:1px solid black;">하위요소</div>
+  </div>
+  <div class="box box3">box-3</div>
+  <div class="box box4">box-4</div>
+  <span>Test</span>
+</body>
+</html>
+<!--
+position속성 : 요소배치 방식
+static - 문서의 흐름
+relative - 현재요소위치를 기준으로 배치지정
+absolute - relative값을 사용하는 상위요소를 기준으로 배치
+fixed - 브라우저 창을 기준으로 위치를 지정
+
+-->

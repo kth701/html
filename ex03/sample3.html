@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미디어 태그</title>
+</head>
+<body>
+  <h3>오디오 태그</h3>
+  <hr>
+  <audio src="images/bass.mp3" controls autoplay loop ></audio>
+  <!-- mp3, ogg, wav -->
+  <hr>
+  <h3>비디오 태그</h3>
+  <video controls autoplay muted ><!-- 음소 적용시 자동재생가능-->
+    <source src="images/dog-cat.mp4" type="video/mp4"> 
+    <source src="images/dog-cat.webm" type="video/webm"> 
+    <source src="images/dog-cat.ogg" type="video/ogg"> 
+  </video>
+  <hr>
+  <h3>텍스트 링크</h3>
+  <a href="http://www.naver.com" target="_blank">네이버</a>
+  <hr>
+  <h3>이미지 링크</h3>
+  <a href="http://www.naver.com">
+    <img src="images/dog.jpg" width="100">
+  </a>
+  <br>
+  <a href="images/dog.jpg">
+    <img src="images/dog.jpg" width="100">
+  </a>
+  <br>
+  <a href="images/dog.jpg">
+    <img src="https://ssl.pstatic.net/melona/libs/1489/1489467/cfa0c600b4a9d536e88e_20240318175207169.jpg" width="400">
+  </a>
+  <hr>
+  <h3>다양한 멀티미더어 파일 삽입할 때 쓰는 태그</h3>
+  <!-- <object>, <embed> -->
+  <h4>웹 문서에서 PDF파일 </h4>
+  <object data="images/product.pdf" width="900" height="800"></object>
+
+</body>
+</html>

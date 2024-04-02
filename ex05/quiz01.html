@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box img {
+      margin-right: 50px ;
+      border: 1px solid rgb(195, 190, 190);
+      box-shadow: 2px 2px 5px  rgb(195, 190, 190);
+    }
+    #box img:first-of-type {
+        border: 2px solid red;
+    }
+
+    /* box-sizing */
+    .box {
+      /* 패딩, 선두께 설정해도 width설정 값 그대로 유지 */
+      box-sizing: border-box;
+
+      width: 100px;height: 100px;
+      padding: 10px;
+      border: 1px solid black;
+    }
+
+    * {
+      margin: 0;padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 메뉴 박스 스타일 */
+    #menu .top-menu {
+      list-style: none;
+      width: 605px;height: 35px;
+      box-shadow: 0 3px 4px rgb(160, 159, 159);
+      background-color: rgb(189, 199, 199);
+      margin: 50px auto;/* 수평 정렬 */
+
+      border: 0px solid red;
+    }
+    /* 메뉴 항목에 대한 스타일 */
+    #menu li{
+      float: left;/* 수직 -> 수평 */
+      border-right: 1px solid rgb(41, 41, 41);
+    }
+    #menu li a:link {
+      display: block;
+      width: 100px;height: 35px;
+
+      text-decoration: none;
+      color: black;
+      text-align: center;
+      line-height: 35px;
+    }
+    /* ":last-child" 부모 안에 있는 모든 요소중 마지막 자식요소 */
+    #menu li:last-child {
+      border-right: none;
+    }
+    #menu li:not(:last-child) a:hover {
+      background-color: #555;
+      color: #fff;
+    }
+    #menu li:last-child a:hover {
+      background-color: #b30000;
+      color: #fff;
+    }
+
+
+  </style>
+</head>
+<body>
+  
+  <div id="menu">
+    <ul class="top-menu">
+      <li>
+        <a href="#">메뉴-1</a>
+      </li>
+      <li><a href="#">메뉴-2</a></li>
+      <li><a href="#">메뉴-3</a></li>
+      <li><a href="#">메뉴-4</a></li>
+      <li><a href="#">메뉴-5</a></li>
+      <li><a href="#">메뉴-6</a></li>
+    </ul>
+  </div>
+  <br><br><br>
+  <hr>
+  <div class="box">box</div>
+
+
+  <br><br><br>
+  <div id="box">
+    <img src="img/1.jpg" alt="">
+    <img src="img/2.jpg" alt="">
+    <img src="img/3.jpg" alt="">
+  </div>
+</body>
+</html>

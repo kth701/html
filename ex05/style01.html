@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스타일 학습하기</title>
+  <!-- 외부 스타일 연결-->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 내부 스타일 -->
+  <style>
+    /* 태그 선택자 */
+    h1 {
+      color: red;
+      background-color: rgb(120, 201, 201);
+    }
+    /* 전체 선택자 */
+    * {
+      margin: 0;padding: 0;
+    }
+
+    /* 스타일 상속 */
+    ul { color: rgb(229, 60, 232);}
+    body { font-size: 24px;}
+  </style>
+</head>
+<body>
+    <h1>제목1</h1>
+    <!-- 인라인 스타일 -->
+    <h2 style="color:blue;">제목2</h2>
+    <h3>제목3</h3>
+    <h1>Title</h1>
+    <hr>
+    <ul>
+      <li>100</li>
+      <li>200</li>
+      <li>100</li>
+      <li>200</li>
+      <li style="color: rgb(143, 106, 106) !important;">100</li>
+      <li>200</li>
+    </ul>
+    <p>Consectetur incididunt enim nisi sunt cupidatat esse adipisicing officia enim.</p>
+    <p>Occaecat labore commodo officia cupidatat nulla commodo tempor dolor duis cillum incididunt laborum proident elit. Voluptate consequat laborum ut qui incididunt aute voluptate. Nulla et officia anim elit dolore ad sint culpa eu esse fugiat laboris ut. Duis quis ullamco et qui duis nisi. Cillum anim laboris reprehenderit et quis nostrud et quis fugiat minim ut fugiat deserunt ex.</p>
+</body>
+</html>
+<!--
+스타일: 
+  글꼴, 색상, 정렬, 각 요소의 배치 방법과 같이 문서의 모습을 결정짓는 역할
+인라인 스타일, 내부 스타일, 외부 스타일
+
+형식
+선택자 : 스타일을 적용할 영역을 선택
+선택자 { 스타일 속성: 스타일 값; }
+
+적용범위
+!important -> 인라인 스타일 -> id스타일 -> 클래스 스타일 -> 타입 스`  1`타일
+
+-->

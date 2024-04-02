@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid 레이아웃</title>
+  <style>
+    #wrapper {
+      display: grid;
+      /* 열의 너비를 고정폭 */
+      grid-template-columns: 200px 200px 200px ;
+      /* 1:1:1 */
+      grid-template-columns: 1fr 1fr 1fr ;
+      grid-template-columns: 1fr 2fr 1fr ;
+      grid-template-columns: repeat(3, 1fr) ;
+      /* grid-template-columns: repeat(3, 1fr 2fr) ; */
+
+      grid-template-rows: 100px;
+      /* 줄 높이는 최소 100px : minmax(최소값 최대값) */
+      grid-template-rows: minmax(100px, auto)
+    }
+    .items {
+      padding: 10px;background-color: #eee;
+      overflow: hidden;
+    }
+    .items:nth-child(odd){
+      background-color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div class="items">Eiusmod quis magna esse mollit anim aute voluptate nostrud pariatur labore. Commodo tempor minim non sit officia. Dolore sint sunt nisi ut commodo ullamco quis aliqua consectetur nostrud est esse quis do. Anim est excepteur est quis. Do esse dolore qui fugiat dolore est ullamco fugiat quis. Sit esse labore enim nostrud minim exercitation tempor irure sint irure in. Velit consequat elit enim anim ipsum occaecat fugiat.</div>
+    <div class="items">Officia ipsum irure commodo elit Lorem est ad excepteur. Consequat veniam aliqua deserunt dolor commodo. Adipisicing ut adipisicing esse do pariatur in do enim consectetur eu amet nisi. Velit consectetur labore laborum irure quis eiusmod nisi magna cupidatat minim aliqua. Occaecat cupidatat laboris ipsum labore. Minim ad sunt ad pariatur non nostrud eu. Sint ad sit elit dolor.</div>
+    <div class="items">Elit mollit non eu nisi pariatur non eu et do incididunt sunt. Amet sunt laborum pariatur occaecat reprehenderit non qui excepteur deserunt occaecat ad esse do. Occaecat proident veniam duis aute irure consequat fugiat. Laboris quis aute sit est minim laboris laborum dolore pariatur laborum pariatur dolor. Ex elit consequat esse quis aute. Culpa amet velit enim do laborum do officia. Culpa velit incididunt culpa sunt pariatur laboris Lorem ut cillum sint eiusmod et id laborum.</div>
+    <div class="items">Id tempor nostrud laborum esse .</div>
+    <div class="items">Esse duis occaecat in laboris laboris tempor culpa irure esse.</div>
+  </div>
+</body>
+</html>

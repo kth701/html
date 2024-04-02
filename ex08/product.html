@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상품 소개</title>
+  <style>
+    * { margin: 0;padding: 0;}
+    ul, li { list-style: none;}
+
+    #container{
+      width: 1000px;
+      margin: 30px auto;
+      padding: 30px;
+
+      background-color: aliceblue;
+      box-shadow: 1px 2px 5px rgb(185, 184, 184);
+    }
+    .list {
+      display: flex;
+      justify-content: space-around;
+    }
+    /* postion속성을 이용하여 좌표방식으로 배치 */
+    .prod-list {
+      position: relative;
+
+      overflow: hidden;
+      border: 5px solid rgb(86, 219, 177);
+      width: 300px;height: 300px;
+    }
+    .prod-list img {
+      position: absolute;
+      top: 0;left: 0;
+    }
+    .prod-list .caption{
+      position: absolute;
+      top: 250px;left: 100px;
+    }
+
+  </style>
+</head>   
+<body>
+  <div id="container">
+    <h1>신상품 목록</h1>
+    <ul class="list">
+      <li class="prod-list">
+        <img src="img/prod1.jpg" alt="">
+        <div class="caption">
+          <h2>상품1</h2>
+          <p>상품1 설명 테스트</p>
+          <p>가격: 12,345원</p>
+        </div>
+      </li>
+      <li class="prod-list">
+        <img src="img/prod2.jpg" alt="">
+        <div class="caption">
+          <h2>상품2</h2>
+          <p>상품2 설명 테스트</p>
+          <p>가격: 12,345원</p>
+        </div>
+      </li>
+      <li class="prod-list">
+        <img src="img/prod3.jpg" alt="">
+        <div class="caption">
+          <h2>상품3</h2>
+          <p>상품3 설명 테스트</p>
+          <p>가격: 12,345원</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글자자 효과 학습</title>
+  <style>
+    /*
+    text-shadow, box-shadow: x거리, y거리, 흐림정도, 그림자색상
+    */
+    div.box {
+      border: 3px solid black;
+      width: 500px;
+
+      box-shadow: 10px 10px 10px black, 
+                  10px 10px 20px orange,
+                  10px 10px 30px red;
+    }
+    .box  h1 {
+      text-shadow: 5px 5px 3px rgb(100, 97, 97);
+    }
+
+    .box2 {
+      font-family: 'Times New Roman', Times, serif;
+      height: 60px; width: 600px;
+      line-height: 60px; text-align: center;
+      background: red;
+      /*linear-gradient(방향, 시작색상, 마지막색상) */
+      background: linear-gradient(to right bottom, blue, white);
+      background: linear-gradient(45deg, #f00, #fff);
+      background: radial-gradient(ellipse at center, #1e5799 0%,#f7f385 100%);
+
+    }
+    /* 하위 선택자: 자손=> ">", 후손 => "공백" */
+    .box3 > h1 {
+      color: red;
+    }
+    /* 인접 형제 선택자 : "+" */
+    .box3 > h1 + p { 
+      background-color: #222;
+      color: #fff;
+    }
+    /* 형제 선택자(같은 부모요소인 요소) */
+    .box3 > h1 ~ p { color: blue;}
+
+  </style>
+</head>
+<body>
+
+  <div class="box3">
+    <h1>예약 방법 및 이용 요금</h1>
+    <p>Cillum laboris elit nisi enim anim ipsum.</p>
+    <p>Laboris labore aliqua et ad.</p>
+    <p>Fugiat aute occaecat aliquip pariatur irure ea nulla proident amet non.</p>
+  </div>
+
+  <hr>
+  <div class="box2">
+    <h1>CSS3 그레이디언트</h1>
+  </div>
+  <br><br><br>
+  <hr>
+  <div class="box">
+    <h1>Esse sint aliqua enim id in  irure.</h1>
+  </div>
+</body>
+</html>

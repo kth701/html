@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글꼴 관련 스타일</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+
+
+    /* 크기 단위: %, em, px,rem.... */
+    #fontsize p:nth-child(1) {
+      
+      font-weight: normal;
+      background-color: red;
+
+      font-family: "East Sea Dokdo", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    #fontsize p:nth-child(2) { 
+      /* font-size:100%;  */
+      font-size:1.0em; 
+      font-style: italic;
+      font-weight: bold;
+      background-color: rgb(255,0,0);
+
+      font-family: "Diphylleia", serif;
+      font-weight: 400;
+      font-style: normal;
+
+    }
+    #fontsize p:nth-child(3) { 
+      /* font-size:150%; */
+      font-size:1.5em; 
+      font-style: oblique;
+      font-weight: bolder;
+      background-color: rgba(255,0,0,0.1)
+    }
+    #fontsize p:nth-child(4) { 
+      /* font-size:200%; */
+      /* font-size:2.0em;  */
+      font-size:16px; 
+      font-weight: 400;/* 100-900*/
+      background-color: rgb(3,199,90);
+
+      /* start, end, left, center, right, justify 등 */
+      text-align:center ;
+    }
+    /* 공간분할
+    block : 줄단위 공간, width, height 속성이 있음
+    inline: 열단위 공간, width, height 속성이 없음
+    */
+    #box p {
+      width: 300px; height: 100px;
+
+      background-color: #eeb0b0;
+      color: rgb(255,255,255);
+      text-align: center;
+      line-height: 100px;
+
+      text-decoration: underline;
+      text-decoration: overline;
+      text-decoration: line-through;
+
+      text-decoration: none;
+      font-weight: 900;
+
+      /* 텍스트 그림자 */
+      text-shadow: 1px 1px  black; /* x, y, color */
+      text-shadow: 0px 0px 10px  black;
+
+      /* 대소문자 */
+      text-transform: lowercase;
+      text-transform: uppercase;
+      text-transform: capitalize;
+
+      /* 자간 */
+      letter-spacing: 0.2em;/* 글자 크기 기준*/
+      
+
+    }
+    #box i {
+      width: 300px; height: 100px;
+      border: 1px solid rgb(233, 76, 76);
+
+
+    }
+    #box a { text-decoration: none;}
+
+    table { 
+      width: 300px;
+      border: 1px solid gray;
+      /* border-collapse: collapse; */
+    }
+    th, td {
+      border: 1px dashed rgb(146, 74, 168);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <caption>선물용 상품 구성</caption>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+  </table>
+  <hr>
+  <div id="box">
+    <p >html5/CSS3</p>
+    <i >inline</i>
+    <a href="http://www.naver.com">네이버</a>
+  </div>
+  <hr>
+  <div id="fontsize">
+    <p>글꼴(바탕)Exercitation occaecat elit ad qui.</p>
+    <p>한글 Exercitation occaecat elit ad qui.</p>
+    <p>Exercitation occaecat elit ad qui.</p>
+    <p>Consectetur fugiat exercitation mollit sunt ullamco enim ullamco. Pariatur id sunt proident exercitation incididunt aliquip elit esse incididunt ex proident. Dolor minim tempor enim culpa fugiat ex occaecat officia labore labore anim exercitation officia. Fugiat velit qui do proident quis elit veniam sit minim Lorem deserunt cillum nulla aute. Nulla ullamco irure nostrud excepteur cillum magna et eiusmod aliquip officia et deserunt. Ea consequat reprehenderit Lorem pariatur voluptate tempor eu nostrud dolore cupidatat veniam est. Duis proident nisi occaecat tempor minim anim.</p>
+  </div>
+</body>
+</html>

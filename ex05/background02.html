@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bg {
+      display: inline-block;
+      width: 600px;height: 400px;
+      border: 1px solid gray;
+
+      background-image: url(img/photo.jpg);
+      background-repeat: no-repeat;
+    }
+    .bg1 {
+      background-size: auto;
+      background-size: 100%;/* 세로는 자동 비율적용 */
+      background-size: 100% 50%;
+    }
+    .bg2 {
+      background-size: contain;/* y축 100% */
+    }
+    .bg3 {
+      background-size: cover;/* x축 100% */
+    }
+  </style>
+</head>
+<body>
+  <img src="img/cat.jpg"  >
+  <div class="bg bg1">배경이미지</div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
+</body>
+</html>
