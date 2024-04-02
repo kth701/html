@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션 알아보기</title>
+  <style>
+    #container {
+      width: 500px;height: 150px;
+      margin: 20px auto;
+
+      display: flex;/* 수직 -> 수평: row nowrap */
+      /* 가로(주)축에 대한 정렬 배치 */
+      justify-content: space-around;
+
+      /* 세로(교차)축에 대한 정룔 배치 */
+      /* 한줄 일 경우 적용 */
+      align-items: center;
+      /* 여러줄 일 경우 적용 */
+      /* align-content:center ; */
+
+      border:1px solid gainsboro;
+    }
+
+    .box {
+      width: 100px;height: 100px;
+    }
+    #box1 {
+      background-color: #5e8d65;
+
+      animation-name: shape;
+      animation-duration: 3s;
+      /* 반복 횟수 */
+      animation-iteration-count: infinite;
+      /* 방향: from-to, to->from */
+      animation-direction: reverse;
+    }
+    #box2 {
+      background-color: #e883e6;
+
+      /* animation-name: rotate; */
+      /* animation-duration: 6s; */
+
+      animation: rotate 1.5s infinite;
+    }
+
+    /* 애니메이션 정의 */
+    @keyframes shape {
+      from {
+        /* 1px짜리 투명한 테두리 */
+        border: 1px solid transparent;
+      }
+      to {
+        /* 검정색 테두리 */
+        border: 5px solid #000;
+        border-radius: 50%;
+      }
+    }
+    @keyframes rotate {
+      0%{
+        transform: rotate(0deg);
+      }
+      50% {
+        background-color: rgb(145, 169, 223);
+      }
+      100%{
+        background-color: #e42626;
+        transform: rotate(45deg);
+      }
+      
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+  </div>
+</body>
+</html>
