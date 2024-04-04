@@ -6,7 +6,7 @@
   margin: 0 ;
   padding: 0 ; 
   li { list-style:none;}
-  a { text-decoration: none} 
+  a { text-decoration: none;} 
 }
 
 /* 속성에 대한 변수 활용 */
@@ -16,6 +16,10 @@
   --accent-color: #bf6a7a;
   --dark-main-color: #2b5566;
   --text-bright-color: #fff;
+  --icon-color: #fff;
+  --icon-bk-color: #ddd;
+
+  --larg-width: 1000px;
 }
 
 body {
@@ -86,6 +90,83 @@ body {
   .conA p {
     font-size: 24px;
   }
+}
+
+/* 콘텐츠 B: (아이콘 + 글자) */
+.conB .container {
+  padding-top:80px;
+  padding-bottom: 20px;
+
+  border: 0px solid blue;
+}
+.conB .text {
+  text-align: center;
+  padding-bottom: 60px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.conB h2 {
+  margin-bottom:10px;
+  font-size: 20px;
+}
+.conB p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+.conB a {
+  color: #5d9ab2;
+  color: var(--main-color) ;
+  
+}
+.conB a:hover {
+  text-decoration: underline;
+}
+.conB .icon {
+  /* inline -> inline-block으로 전환 */
+  display: inline-block;
+  margin-bottom: 20px;
+
+  font-size: 40px;
+  /* 폰트 크기 기준 */
+  width: 2em;
+  /* height: 2em; */
+  line-height: 2em;
+  text-align: center;
+  border-radius: 50%;
+
+  background-color: var(--icon-bk-color);
+  color: var(--icon-color);
+
+  border: 0px solid blue;
+}
+
+/* pc화면(768px이상)일 경우 레이아웃 재배치 */
+@media(min-width: 768px){
+  .conB .container {
+    /* 수직 -> 수평 */
+    display: flex;
+    /* 최대 가로폭을 설정 */
+    max-width: var(--larg-width);
+    /* 가운데 배치 */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .conB .text {
+    flex: 1;
+  }
+  /* .conB .text:nth-child(1) {
+    flex: 1;
+  }
+  .conB .text:nth-child(2) {
+    flex: 1;
+  }
+  .conB .text:nth-child(3) {
+    flex: 2;
+  } */
 }
 
 
