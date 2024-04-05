@@ -244,3 +244,74 @@ body {
 
 
 
+
+/* 콘텐츠 D: (글자 + 이미지) */
+
+.conD .photo {
+  min-height: 200px;
+
+  background-image: url(../img/life.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.conD .text {
+  padding: 20px;
+}
+.conD h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.conD p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.8em;
+  opacity: 0.8;
+}
+
+.conD a {
+  display: inline-block;
+  margin-top: 20px;
+
+  padding: 10px 30px;
+  border-radius: 6px;
+  /* currentColor  : 폰트색상과 동일 */
+  border: 3px solid currentColor;
+  /* 글자 효과 */
+  box-shadow : 0 0 0 1px #888;
+
+
+  color: var(--text-bright-color);
+  background-color:var(--accent-color);
+  font-size: 14px;
+
+}
+
+.conD a:hover {
+  background-image: linear-gradient(
+    rgba(255,255,255,0.2), 
+    rgba(255,255,255,0.2))
+}
+
+/* pc화면(768px이상)일 경우 레이아웃 재배치 */
+@media(min-width: 768px){
+  .conD .container {
+    display: flex;
+    flex-direction: row-reverse;
+
+    max-width:var(--larg-width);
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    border:0px solid blue;
+  }
+  /* 플렉스 항목을 비율이 아닌 고정 크기 */
+  .conD .photo { flex: 0 0 400px; }
+  .conD .text {
+    flex: 1;
+    padding: 50px;
+   }
+}
+
