@@ -315,3 +315,76 @@ body {
    }
 }
 
+/* 푸터 */
+footer {
+
+  color: var(--text-bright-color);
+  background-color:var(--dark-main-color);
+}
+
+footer .container {
+  padding: 40px 20px;
+}
+.footA {
+  margin-bottom: 30px;
+}
+.footA h2{
+  margin-bottom: 10px;
+  font-size: 30px;
+  letter-spacing: 0.2em;
+}
+.footA p {
+  font-size: 14px;
+}
+.footA a {
+  color: inherit;/* 부모요소의 색상을 상속 */
+}
+.footB > div {
+  margin-bottom: 20px;
+}
+
+.footB h3{
+  padding-left: 2px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid currentColor;
+
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footB a {
+  display: block;
+  padding: 5px;
+
+  color: inherit;
+  font-size: 12px;
+}
+.footB a:hover {
+  background-color: rgba(0,0,0, 0.3);
+}
+.footC {
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (min-width: 768px){
+  footer .container {
+    display: flex;
+    /* row nowrap */
+    /* 여러 줄 */
+    flex-wrap: wrap; 
+
+    max-width: var(--larg-width);
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 0px solid red;
+    
+  }
+
+  .footA { flex: 0 0 40%;}
+  .footB { flex: 0 0 60%;}
+  .footC { flex: 0 0 100%;}
+}
+
+
