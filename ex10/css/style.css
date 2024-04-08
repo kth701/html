@@ -379,7 +379,16 @@ footer .container {
     margin-right: auto;
 
     border: 0px solid red;
-    
+
+    .footB {
+      display: flex;
+    }
+    .footB div {
+      flex: 1;
+    }
+    .footB div:not(:first-child) {
+      margin-left: 40px;
+    }
   }
 
   .footA { flex: 0 0 40%;}
