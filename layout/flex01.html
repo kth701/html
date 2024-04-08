@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      /* 배치 방식을 flex box layout방식으로 전환 */
+      display: flex;
+      /* 생략시 기본값으로 적용: row nowrap */
+      /* flex-direction: column; */
+      /* flex-direction: row-reverse; */
+      /* 한줄(기본값) */
+      flex-flow: row nowrap; 
+      /* 여러줄 
+      flex-flow: row wrap; */ 
+
+      justify-content: flex-start ;
+      align-items: flex-start;
+
+      
+
+
+      width: 300px;height: 500px;
+      /* block 방식에서 수평 정렬 */
+      margin-left: auto;margin-right: auto;
+
+      border: 2px solid red;
+    }
+    .box1-1 { 
+      flex: 1;
+      /* flex 에서 너비 고정 */
+      flex: 0 0 100px;
+      width: 100px;height: 100px;
+      background: #edadad;     
+    }
+    .box1-2 {
+      flex: 2;
+      flex: 0 0 200px;
+      width: 100px;height: 100px;
+      background: #3d92d7;
+    }
+    .box1-3 {
+      flex: 1;
+      flex: 0 0 100px;
+      width: 100px;height: 100px;
+      background: #77c061;
+    }
+    ul { 
+      list-style: none; 
+      margin: 0;
+      padding: 0;
+    }
+    ul a { 
+      text-decoration: none; 
+      color: rgb(134, 132, 132)
+    }
+    .nav ul {
+      display: flex;
+    }
+    .nav ul li {
+      flex: 0 0 70px;
+    }
+    .nav ul a {
+      display: block;
+      text-align: center;
+    }
+    .nav ul a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<h1>flex을 이용한 메뉴</h1>
+<div class="nav">
+  <ul>
+    <li><a href="#">메일</a></li>
+    <li><a href="#">카페</a></li>
+    <li><a href="#">블로그</a></li>
+    <li><a href="#">쇼핑</a></li>
+    <li><a href="#">뉴스</a></li>
+  </ul>
+</div>
+
+
+  <h1>기본레이아웃: inline, block</h1>
+  <div class="box">
+    box1
+    <div class="box1-1">box1-1</div>
+    <div class="box1-2">box1-2</div>
+    <div class="box1-3">box1-3</div>
+  </div>
+
+</body>
+</html>
