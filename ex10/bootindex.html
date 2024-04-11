@@ -58,16 +58,104 @@
       /* 글자 효과 */
       box-shadow : 0 0 0 1px #888 !important;
     }
+    .col-md-8 .col-md-4 a {
+      display: block; 
+      text-decoration: none;
+      color: white;
+    }
+    
+    .col-md-8 .col-md-4 a:hover {
+      /*
+      background-color: rgb(129, 185, 220); 
+      color: white;
+      */
+
+      text-decoration: underline;
+    }
+    .col-md-4 h3 {
+      margin-bottom: 15px;
+    }
+    .col-md-4 ul li {
+      background-color: #5d9ab2;
+      
+    }
+    footer {
+      color: white;
+      background-color: #5d9ab2;
+    }
+    footer .copyright {
+      text-align: center;
+     
+    }
+
+    .header {
+      text-align: center;
+      padding: 30px;
+    }
+  /* pc화면(768px이상)일 경우 레이아웃 재배치 */
+  @media(min-width: 768px){
+    .my-container {
+      max-width:var(--larg-width) !important; 
+      max-width: 1000px !important;
+      margin-left: auto;
+      margin-right: auto;
+
+      padding-top: 40px;
+      padding-bottom: 40px;
+
+    }
+  }
+
+    
     </style>
   </head>
   <body>
 
     <section class="header mb-4">
-      <div class="container">Header</div>
+      
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark   fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">LOGGER</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#">콘텐츠</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " href="#"  >
+                  소개
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link "  href="#">문의</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>   
+
+      <br><br><br><br><br>
+      <div>
+        <h1><strong>Display your web design</strong><br>in a web browser</h1>
+        <h4 class="silver hidden-xs">Fastest way to present your design and get feedback from your clients!</h4>        
+        <div class="btn btn-primary btn-lg">Upload Project</div>
+              
+        <div class="silver small-info margin-top-big d-none d-md-block"></div>          
+          
+          Drop here or select your project<br>prepared in the PNG or JPG format
+        </div>   
+      </div>
+      <br><br><br>
     </section>
 
     <section class="conB mb-4">
-      <div class="container w-75">
+      <div class="container my-container ">
         <div class="row text-center">
 
           <div class="col ">
@@ -101,7 +189,7 @@
     </section>
 
     <section class="conC bg-info-subtle ">
-      <div class="container w-75">
+      <div class="container my-container">
         <dir class="row ">
           <div class="col-7 photo p-3">
             
@@ -118,7 +206,7 @@
     </section>
 
     <section class="conD">
-      <div class="container p-3 w-75">
+      <div class="container p-3 my-container">
         <div class="row">
           <div class="col-6 p-5">
             <h2 class="fs-5">귀찮은 설정과 데이터 관리를 하지 않아도 됩니다.</h2>
@@ -135,49 +223,51 @@
     </section>
     
     <footer>
-      <div class="container p-3 w-75">
+      <div class="container my-container p-3">
         <div class="row">
-          <div class="col-md-4">`
+          <div class="col-md-4">
             <h2>LOGGER</h2>
             <p>주소: 더조은아카데미</p>
             <a href="https://bs.tjoeun.co.kr/">
               https://bs.tjoeun.co.kr/
             </a>
           </div>
-          <div class="col-md-8">
-            <div>
-              <h3>ABOUT</h3>
-              <ul>
-                <li><a href="#">설립</a></li>
-                <li><a href="#">주소</a></li>
-                <li><a href="#">지도</a></li>
-                <li><a href="#">스태프</a></li>
-              </ul>
+          <div class="col-md-8 ">
+            <div class="row">
+              <div class="col-md-4">
+                <h3>ABOUT</h3>
+                <ul class="list-group" >
+                  <li class="list-group-item"><a href="#">설립</a></li>
+                  <li class="list-group-item"><a href="#">주소</a></li>
+                  <li class="list-group-item"><a href="#">지도</a></li>
+                  <li class="list-group-item"><a href="#">스태프</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-md-4">
+                <h3>SUPPORT</h3>
+                <ul class="list-group">
+                  <li class="list-group-item"><a href="#">다운로드</a></li>
+                  <li class="list-group-item"><a href="#">매뉴얼</a></li>
+                  <li class="list-group-item"><a href="#">자주 묻는 질문</a></li>
+                  <li class="list-group-item"><a href="#">문의</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-md-4">
+                <h3>CONTENTS</h3>
+                <ul class="list-group">
+                  <li class="list-group-item"><a href="#">공지사항</a></li>
+                  <li class="list-group-item"><a href="#">비즈니스</a></li>
+                  <li class="list-group-item"><a href="#">프로필</a></li>
+                  <li class="list-group-item"><a href="#">개발자</a></li>
+                  <li class="list-group-item"><a href="#">블로그</a></li>
+                </ul>
+              </div>  
             </div>
-  
-            <div>
-              <h3>SUPPORT</h3>
-              <ul>
-                <li><a href="#">다운로드</a></li>
-                <li><a href="#">매뉴얼</a></li>
-                <li><a href="#">자주 묻는 질문</a></li>
-                <li><a href="#">문의</a></li>
-              </ul>
-            </div>
-  
-            <div>
-              <h3>CONTENTS</h3>
-              <ul>
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#">비즈니스</a></li>
-                <li><a href="#">프로필</a></li>
-                <li><a href="#">개발자</a></li>
-                <li><a href="#">블로그</a></li>
-              </ul>
-            </div>  
           </div>
-          <div class="col-md-12">
-            &copy;LOGGER corp. All rights reserved.
+          <div class="col-md-12 copyright">
+            &copy; LOGGER corp. All rights reserved.
           </div>
         </div>
       </div>
